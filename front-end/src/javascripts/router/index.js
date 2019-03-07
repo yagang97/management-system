@@ -12,7 +12,7 @@ const init = () => {
     if(!location.hash){
         location.hash = "#/home"
     }
-
+ 
     //根据不同的路由来渲染不同的页面
     router.route('/home', appHomeController.render)
     router.route('/jop/items', appItemsController.render)
