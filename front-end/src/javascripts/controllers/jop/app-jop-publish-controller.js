@@ -1,7 +1,7 @@
 import appJopPublish from "@views/router/app-jop-publish.html"
-import postJopItem from "@models/jop-model"
+import {postJopItem} from "@models/jop-model"
 
-// let img = ""// 准备上传的图片的路径
+let img = ""// 准备上传的图片的路径
 
 const render = (req,res,next) => { 
     // 渲染视图
@@ -23,8 +23,8 @@ function bindEvents() {
         // let description = editor.getValue()
         let jop = $('#item-jop').val()
         let showTime = $('#datepicker').val()
-        await postJopItem({
-            title,description,jop,showTime
+        let data = await postJopItem({ 
+            title,description,jop,showTime,img
         })
 
         // if(data){

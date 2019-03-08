@@ -16,7 +16,7 @@ module.exports = {
         // host: '10.60.18.164',
         proxy: {//proxyy服务代理跨域，改变了请求http的协议和端口
             '/api': {
-                target: 'http://localhost:3333',
+                target: 'http://localhost:3000',
                 changeOrigin: true
             }
         }
